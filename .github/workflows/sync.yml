@@ -1,0 +1,58 @@
+name: Sync plugin repository
+
+on:
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync.yml'
+      - 'scripts/**'
+      - 'sources.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-plugin-repository
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: main
+      - name: Validate published packages and generate index
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: ./scripts/sync.ps1
+      - name: Publish index and monthly activity record
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          # Record one successful run each UTC month, including months without a release.
+          # Public repositories otherwise lose scheduled workflows after 60 inactive days.
+          $heartbeat = [ordered]@{ LastSuccessfulMonthUtc = [DateTime]::UtcNow.ToString('yyyy-MM') }
+          $heartbeatJson = (ConvertTo-Json $heartbeat).Replace("`r`n", "`n") + "`n"
+          [IO.File]::WriteAllText((Join-Path $PWD '.github/sync-heartbeat.json'), $heartbeatJson, [Text.UTF8Encoding]::new($false))
+          git add -- pluginmaster.json sources.lock.json .github/sync-heartbeat.json
+          if ($LASTEXITCODE -ne 0) { throw 'Staging failed.' }
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            'No published plugin changes; monthly activity record is current.' >> $env:GITHUB_STEP_SUMMARY
+            exit 0
+          }
+          if ($LASTEXITCODE -ne 1) { throw 'Diff failed.' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: sync published plugins and activity record'
+          if ($LASTEXITCODE -ne 0) { throw 'Commit failed.' }
+          git push origin HEAD:main
+          if ($LASTEXITCODE -ne 0) { throw 'Push failed; the public index was not updated.' }
+          'Published the validated plugin index.' >> $env:GITHUB_STEP_SUMMARY

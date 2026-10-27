@@ -1,0 +1,14 @@
+[
+  {
+    "InternalName": "DuckbillTweak",
+    "Repository": "PlatyDuckbill/DuckbillTweak",
+    "Branch": "main",
+    "ManifestPath": "repo/pluginmaster.json"
+  },
+  {
+    "InternalName": "DuckbillFisher",
+    "Repository": "PlatyDuckbill/DuckbillFisher",
+    "Branch": "main",
+    "ManifestPath": "repo/pluginmaster.json"
+  }
+]
