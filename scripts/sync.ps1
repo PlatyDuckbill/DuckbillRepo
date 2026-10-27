@@ -61,7 +61,7 @@ foreach ($source in $sources) {
     $path = [string]$source.ManifestPath
     Assert-That ($name -cmatch '^[A-Za-z][A-Za-z0-9]*$' -and $names.Add($name)) 'Invalid or duplicate InternalName.'
     Assert-That ($repo -cmatch '^PlatyDuckbill/[A-Za-z0-9_.-]+$') "Unexpected repository: $repo"
-    Assert-That ($branch -cmatch '^[A-Za-z0-9_.-]+$' -and $path -ceq 'repo/pluginmaster.json') 'Unexpected source branch or manifest path.'
+    Assert-That ($branch -cmatch '^[A-Za-z0-9_.-]+$' -and $path -ceq 'repo/release.json') 'Unexpected source branch or manifest path.'
 
     # Resolve the last commit affecting this file, then read its immutable contents.
     $commits = Get-Json "https://api.github.com/repos/$repo/commits?sha=$branch&path=$path&per_page=1" -Api
@@ -70,9 +70,8 @@ foreach ($source in $sources) {
     Assert-That ($commit -cmatch '^[a-f0-9]{40}$') 'Invalid source commit.'
     $manifestUrl = "https://raw.githubusercontent.com/$repo/$commit/$path"
     $sourceBytes = Get-Bytes $manifestUrl
-    $entries = $utf8.GetString($sourceBytes) | ConvertFrom-Json -AsHashtable -NoEnumerate
-    Assert-That ($entries -is [array] -and $entries.Count -eq 1) "Expected one stable plugin in $repo."
-    $entry = $entries[0]
+    $entry = $utf8.GetString($sourceBytes) | ConvertFrom-Json -AsHashtable -NoEnumerate
+    Assert-That ($entry -is [Collections.IDictionary]) "Expected a single release object in $repo."
     Assert-That ($entry -is [Collections.IDictionary] -and $entry.InternalName -ceq $name) "Manifest identity mismatch: $repo."
     $version = [string]$entry.AssemblyVersion
     Assert-That ($version -cmatch '^\d+\.\d+\.\d+\.\d+$') "Invalid version: $name."

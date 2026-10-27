@@ -4,9 +4,9 @@
 
 - DuckbillTweak: https://github.com/PlatyDuckbill/DuckbillTweak
 - DuckbillFisher: https://github.com/PlatyDuckbill/DuckbillFisher
-- 사용 자료: 각 저장소의 `repo/pluginmaster.json`, 공개 Release 메타데이터, ZIP·SHA-256·아이콘.
+- 사용 자료: 각 저장소의 단일 배포 객체 `repo/release.json`, 공개 Release 메타데이터, ZIP·SHA-256·아이콘. 기존 개별 `repo/pluginmaster.json`은 종료합니다.
 - 각 동기화에서 확인한 고정 원본 커밋과 해시는 `sources.lock.json`에 기록합니다.
-- 가공: JSON 배열 두 개를 하나로 결합하고 UTF-8/LF로 재직렬화합니다. 개별 항목 필드와 다운로드 주소는 변경하지 않습니다.
+- 가공: 배포 객체 두 개를 JSON 배열 하나로 결합하고 UTF-8/LF로 재직렬화합니다. 개별 항목 필드와 다운로드 주소는 변경하지 않습니다.
 - ZIP·DLL·아이콘은 검증 목적으로 메모리에서 읽으며 이 저장소에 복사하거나 재배포하지 않습니다. 플러그인 소스 코드는 도입하지 않습니다.
 - 원본 프로젝트의 라이선스·고지는 각 저장소와 배포 패키지를 따릅니다. 이 저장소의 라이선스가 원본 자료의 권리를 대체하지 않습니다.
 
