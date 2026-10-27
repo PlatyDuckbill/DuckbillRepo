@@ -72,9 +72,10 @@ Actions에서는 내장 토큰을 API 호출에 사용하며 공개 ZIP·raw 파
 
 ## 기존 설치 URL 종료
 
-Tweak와 Fisher의 `main/repo/pluginmaster.json`은 공용 자동화가 새 `repo/release.json`을 검증한 뒤 삭제합니다.
+Tweak와 Fisher의 `main/repo/pluginmaster.json`은 공용 자동화가 새 `repo/release.json`을 검증한 뒤 삭제했습니다.
 기존 URL은 raw 캐시 만료 후 HTTP 404를 반환합니다. 사용자는 Dalamud 저장소 설정에서 기존 행을 제거하고 공용 URL을 등록해야 합니다.
-설치된 DLL·설정 파일은 이 파일 삭제로 변경하지 않습니다. 과거 커밋·버전 태그의 파일과 기존 Release ZIP은 보존하며 이력을 재작성하지 않습니다.
+이 파일 삭제가 사용자 PC의 DLL·설정을 지우지는 않습니다. 다만 Dalamud는 설치 시 `InstalledFromUrl`을 저장하고 같은 출처의 업데이트만 고르므로, 기존 사용자는 [README의 전환 절차](../README.md#기존-개별-저장소에서-전환)에 따라 설정·기록을 보존한 채 플러그인만 한 번 제거·재설치합니다. 설정/데이터 삭제 명령은 사용하지 않습니다.
+과거 커밋·버전 태그의 파일과 기존 Release ZIP은 보존하며 이력을 재작성하지 않습니다. 실제 한국 Dalamud 배포판의 전환·설정 복원 실기는 별도 확인 대상입니다.
 
 ## 참고 자료
 

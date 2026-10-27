@@ -11,4 +11,6 @@
 - [첫 GitHub Actions 실행](https://github.com/PlatyDuckbill/DuckbillRepo/actions/runs/40517146026)은 성공했다. Linux 서버에서 패키지 검증과 봇 커밋·푸시를 확인했다.
 - 초기 구성 커밋 `26bd10c`, 첫 자동 커밋 `f50e4f2`. 로컬 저장소는 `C:\Users\hyogu\Downloads\DuckbillRepo`에 있다.
 - 예약 실행은 활성 상태다. 수동 실행도 제공한다. 실제 Dalamud 설치·인게임 확인은 수행하지 않았다.
-- 이번 요청: 두 플러그인 README의 공용 URL 전환과 개별 `main/repo/pluginmaster.json` 삭제를 진행 중이다. 새 원본에 대한 Actions 검증 후 삭제한다.
+- 두 플러그인 README를 공용 URL로 변경하고 개별 `main/repo/pluginmaster.json`을 삭제했다. 자동화는 단일 배포 객체 `repo/release.json`을 읽는다. [새 원본 검증 Actions](https://github.com/PlatyDuckbill/DuckbillRepo/actions/runs/40518916863)는 성공했으며 삭제 후 로컬 `-Check`도 통과했다.
+- 설치 출처 URL 일치 조건을 확인해 기존 사용자에게 설정·기록을 보존한 1회 플러그인 재설치를 안내한다. 한국 Dalamud에서의 실제 전환·설정 복원 실기는 별도 대기다.
+- 변경 커밋: Tweak `9ab158e`/`d9bbb51`, Fisher `be865aa`/`5713f78`, 공용 자동화 `1d20dcd`. 기존 Release ZIP과 플러그인 실행 파일은 변경하지 않았다.
