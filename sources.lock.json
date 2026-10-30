@@ -1,15 +1,15 @@
 [
   {
     "InternalName": "DuckbillTweak",
-    "AssemblyVersion": "0.2.0.3",
+    "AssemblyVersion": "0.2.0.4",
     "Repository": "PlatyDuckbill/DuckbillTweak",
-    "SourceCommit": "c4057fb7364b3696f437d8f939c372eac11caebd",
-    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillTweak/c4057fb7364b3696f437d8f939c372eac11caebd/repo/release.json",
-    "ManifestSha256": "790eef8d4695bc83ef8c73b7ff57227f25a795d4ad8d368ed3732bdc5e6af298",
-    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillTweak/releases/tag/v0.2.0.3",
-    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillTweak/releases/download/v0.2.0.3/DuckbillTweak-0.2.0.3.zip",
-    "ZipSha256": "72883c85af9c022e184e7b19d541ca11d08e3f5ca21b51fa3511e30a45ba9a73",
-    "ZipSize": 417990,
+    "SourceCommit": "325264ae55fcb2e7e95c5611fe28d3891e30def6",
+    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillTweak/325264ae55fcb2e7e95c5611fe28d3891e30def6/repo/release.json",
+    "ManifestSha256": "ed07ec8cd40ecb61c6fc4e535c7ef6b4eebc8712cd8465a293546942c89f99a7",
+    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillTweak/releases/tag/v0.2.0.4",
+    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillTweak/releases/download/v0.2.0.4/DuckbillTweak-0.2.0.4.zip",
+    "ZipSha256": "4f060667001fb5bc80b0d7931bf5be6ad8c251b1e2bb80b23f22d9e202dc82c6",
+    "ZipSize": 418391,
     "IconSha256": "91a35805cd22ea2861b505d9b0475839d30157642ee7301d74ab1e45665ba868"
   },
   {
