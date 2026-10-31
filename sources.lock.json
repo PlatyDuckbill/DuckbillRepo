@@ -14,15 +14,15 @@
   },
   {
     "InternalName": "DuckbillFisher",
-    "AssemblyVersion": "0.6.0.0",
+    "AssemblyVersion": "0.6.0.1",
     "Repository": "PlatyDuckbill/DuckbillFisher",
-    "SourceCommit": "be865aa437ae41f41ab199c67ede21a17812bd5a",
-    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillFisher/be865aa437ae41f41ab199c67ede21a17812bd5a/repo/release.json",
-    "ManifestSha256": "16f9e093204f8e1bd1737190ebe586023daeac8518b4b540c5645221088f43a5",
-    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillFisher/releases/tag/v0.6.0.0",
-    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillFisher/releases/download/v0.6.0.0/DuckbillFisher-0.6.0.0.zip",
-    "ZipSha256": "6dddd1563c1bbe5d1f894a6d84bc71b55909a1e61fb8378ba4c8bda9aa00408c",
-    "ZipSize": 628536,
+    "SourceCommit": "487568ba9b175d7a02be653a0c2708aa4a60ecd6",
+    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillFisher/487568ba9b175d7a02be653a0c2708aa4a60ecd6/repo/release.json",
+    "ManifestSha256": "f4e7654aa256040172c07f255f26a8e06aa944b762b94dcb7a5776ab598f8a78",
+    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillFisher/releases/tag/v0.6.0.1",
+    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillFisher/releases/download/v0.6.0.1/DuckbillFisher-0.6.0.1.zip",
+    "ZipSha256": "1a5e380aa26d40c032a21856cf3a57be3fc6f9d75b101a0c977385618e408b1c",
+    "ZipSize": 629145,
     "IconSha256": "7cec514fec1d88a842ef0c82071bb708c98e717b81ab8a494c6aa3bcb5a195fa"
   }
 ]
