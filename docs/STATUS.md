@@ -1,8 +1,9 @@
 # 현재 상태
 
-갱신: 2026-10-27
+갱신: 2026-11-10
 
-- 목적: DuckbillTweak와 DuckbillFisher를 URL 하나로 제공하는 공용 설치 목록.
+- 목적: DuckbillTweak·DuckbillFisher·DuckbillRelic을 URL 하나로 제공하는 공용 설치 목록.
+- 2026-11-10: DuckbillRelic을 `sources.json`에 등록했다. 아직 `repo/release.json`이 없어 첫 배포 대기로 건너뛰며 공용 목록에는 Tweak 0.2.2.1·Fisher 0.9.0.0만 있다. 로컬 `-Check` 통과.
 - 원본 소스·Release는 각 플러그인 저장소에서 계속 관리한다. 자동화 입력을 단일 객체 `repo/release.json`으로 전환하고 기존 개별 설치 URL은 종료한다.
 - 초기 수집: DuckbillTweak 0.2.0.0, DuckbillFisher 0.6.0.0.
 - 공개 ZIP의 크기·SHA-256, ZIP JSON과 DLL 식별자·버전, 아이콘 PNG 정적 검증을 로컬에서 통과했다.

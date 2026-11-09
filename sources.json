@@ -10,5 +10,11 @@
     "Repository": "PlatyDuckbill/DuckbillFisher",
     "Branch": "main",
     "ManifestPath": "repo/release.json"
+  },
+  {
+    "InternalName": "DuckbillRelic",
+    "Repository": "PlatyDuckbill/DuckbillRelic",
+    "Branch": "main",
+    "ManifestPath": "repo/release.json"
   }
 ]

@@ -53,6 +53,13 @@ Assert-That ($sources -is [array] -and $sources.Count -gt 0) 'sources.json must 
 $names = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 $manifests = [Collections.Generic.List[object]]::new()
 $records = [Collections.Generic.List[object]]::new()
+$publishedNames = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+$publishedPath = Join-Path $root 'pluginmaster.json'
+if ([IO.File]::Exists($publishedPath)) {
+    foreach ($published in @([IO.File]::ReadAllText($publishedPath) | ConvertFrom-Json -AsHashtable)) {
+        [void]$publishedNames.Add([string]$published.InternalName)
+    }
+}
 
 foreach ($source in $sources) {
     $name = [string]$source.InternalName
@@ -65,7 +72,14 @@ foreach ($source in $sources) {
 
     # Resolve the last commit affecting this file, then read its immutable contents.
     $commits = Get-Json "https://api.github.com/repos/$repo/commits?sha=$branch&path=$path&per_page=1" -Api
-    Assert-That ($commits -is [array] -and $commits.Count -eq 1) "No source commit for $repo."
+    Assert-That ($commits -is [array]) "Unexpected commit listing for $repo."
+    if ($commits.Count -eq 0 -and !$publishedNames.Contains($name)) {
+        # Registered before its first release: skip until the release object exists.
+        # A plugin already in the public index must never disappear this way.
+        Write-Host "Pending first release: $name (no $path on $branch yet)"
+        continue
+    }
+    Assert-That ($commits.Count -eq 1) "No source commit for $repo."
     $commit = [string]$commits[0].sha
     Assert-That ($commit -cmatch '^[a-f0-9]{40}$') 'Invalid source commit.'
     $manifestUrl = "https://raw.githubusercontent.com/$repo/$commit/$path"
