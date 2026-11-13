@@ -1,8 +1,9 @@
 # 현재 상태
 
-갱신: 2026-11-10
+갱신: 2026-11-14
 
-- 목적: DuckbillTweak·DuckbillFisher·DuckbillRelic을 URL 하나로 제공하는 공용 설치 목록.
+- 2026-11-14: DuckbillCalendar0.3.2.0 최초 배포를 등록했다. 공개 Release ZIP·SHA256·JSON/DLL 메타데이터·태그 아이콘 검증과 sync.ps1 및 -Check를 통과했다. Tweak0.2.2.2·Fisher0.9.0.0·Calendar0.3.2.0을 제공하며 Relic은 첫 배포 대기다. 실제 Dalamud 설치·인게임 확인은 별도다.
+- 목적: DuckbillTweak·DuckbillFisher·DuckbillCalendar·DuckbillRelic을 URL 하나로 제공하는 공용 설치 목록.
 - 2026-11-10: DuckbillRelic을 `sources.json`에 등록했다. 아직 `repo/release.json`이 없어 첫 배포 대기로 건너뛰며 공용 목록에는 Tweak 0.2.2.1·Fisher 0.9.0.0만 있다. 로컬 `-Check` 통과.
 - 원본 소스·Release는 각 플러그인 저장소에서 계속 관리한다. 자동화 입력을 단일 객체 `repo/release.json`으로 전환하고 기존 개별 설치 URL은 종료한다.
 - 초기 수집: DuckbillTweak 0.2.0.0, DuckbillFisher 0.6.0.0.

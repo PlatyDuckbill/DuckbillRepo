@@ -16,5 +16,11 @@
     "Repository": "PlatyDuckbill/DuckbillRelic",
     "Branch": "main",
     "ManifestPath": "repo/release.json"
+  },
+  {
+    "InternalName": "DuckbillCalendar",
+    "Repository": "PlatyDuckbill/DuckbillCalendar",
+    "Branch": "main",
+    "ManifestPath": "repo/release.json"
   }
 ]

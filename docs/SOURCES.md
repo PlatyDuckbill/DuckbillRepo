@@ -4,6 +4,7 @@
 
 - DuckbillTweak: https://github.com/PlatyDuckbill/DuckbillTweak
 - DuckbillFisher: https://github.com/PlatyDuckbill/DuckbillFisher
+- DuckbillCalendar: https://github.com/PlatyDuckbill/DuckbillCalendar
 - DuckbillRelic: https://github.com/PlatyDuckbill/DuckbillRelic (첫 배포 전)
 - 사용 자료: 각 저장소의 단일 배포 객체 `repo/release.json`, 공개 Release 메타데이터, ZIP·SHA-256·아이콘. 기존 개별 `repo/pluginmaster.json`은 종료합니다.
 - 각 동기화에서 확인한 고정 원본 커밋과 해시는 `sources.lock.json`에 기록합니다.

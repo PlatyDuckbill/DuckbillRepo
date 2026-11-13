@@ -2,7 +2,7 @@
 
 ## 평소 배포
 
-DuckbillTweak·DuckbillFisher·DuckbillRelic 중 변경한 플러그인만 기존 절차대로 검증하고 공개합니다.
+DuckbillTweak·DuckbillFisher·DuckbillCalendar·DuckbillRelic 중 변경한 플러그인만 기존 절차대로 검증하고 공개합니다.
 
 1. 플러그인을 빌드하고 리소스·패키지와 필요한 실기 확인을 진행합니다.
 2. 버전 태그와 정식 GitHub Release를 공개합니다.

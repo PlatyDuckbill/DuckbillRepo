@@ -24,5 +24,18 @@
     "ZipSha256": "536db092be1f8b5dee6c6d651de502de838a946f31c22cad1ef8aebe6418c84b",
     "ZipSize": 711608,
     "IconSha256": "7cec514fec1d88a842ef0c82071bb708c98e717b81ab8a494c6aa3bcb5a195fa"
+  },
+  {
+    "InternalName": "DuckbillCalendar",
+    "AssemblyVersion": "0.3.2.0",
+    "Repository": "PlatyDuckbill/DuckbillCalendar",
+    "SourceCommit": "8c222159439ca031ea3af277d183f761559cf28e",
+    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillCalendar/8c222159439ca031ea3af277d183f761559cf28e/repo/release.json",
+    "ManifestSha256": "8f10ef3c6ccff9f4d56dd5fcdfb98988c2b158fa839877dcca42d7fb92eab1ed",
+    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillCalendar/releases/tag/v0.3.2.0",
+    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillCalendar/releases/download/v0.3.2.0/DuckbillCalendar-0.3.2.0.zip",
+    "ZipSha256": "3d5b2bfe0e4b388063d9a85f46dfad2bbeaeeb0dbb498f0fb1b20638c6ef2d6b",
+    "ZipSize": 616445,
+    "IconSha256": "195ccd75c41eee806b581ed7f1076adf3295f4516c480c56a2a524963061dd84"
   }
 ]
