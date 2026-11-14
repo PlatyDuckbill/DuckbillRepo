@@ -27,15 +27,15 @@
   },
   {
     "InternalName": "DuckbillCalendar",
-    "AssemblyVersion": "0.4.0.0",
+    "AssemblyVersion": "0.4.0.1",
     "Repository": "PlatyDuckbill/DuckbillCalendar",
-    "SourceCommit": "b1a10e8423545c418d8b876084404468eb0fe35c",
-    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillCalendar/b1a10e8423545c418d8b876084404468eb0fe35c/repo/release.json",
-    "ManifestSha256": "ca5f3d3d03323ac087dd87506f33d024e736c094c5d6716edc34a27b4088ef4e",
-    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillCalendar/releases/tag/v0.4.0.0",
-    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillCalendar/releases/download/v0.4.0.0/DuckbillCalendar-0.4.0.0.zip",
-    "ZipSha256": "16938321b93efbc56e6d4d3b16bbc8f98f2f21b60b663dd963853cd5e4596f91",
-    "ZipSize": 637019,
+    "SourceCommit": "a2e38224f9b8dc68fd95d7ba52e558ef5a14e015",
+    "ManifestUrl": "https://raw.githubusercontent.com/PlatyDuckbill/DuckbillCalendar/a2e38224f9b8dc68fd95d7ba52e558ef5a14e015/repo/release.json",
+    "ManifestSha256": "bc0edcd58689aae00a2d9fd6b17287fcb5df199ec7903b0ff129126ddc7956b8",
+    "ReleaseUrl": "https://github.com/PlatyDuckbill/DuckbillCalendar/releases/tag/v0.4.0.1",
+    "DownloadUrl": "https://github.com/PlatyDuckbill/DuckbillCalendar/releases/download/v0.4.0.1/DuckbillCalendar-0.4.0.1.zip",
+    "ZipSha256": "cb1a442d9aff52d9883a7d3cb087a362472e1e9cf4ef9a85d7985a46abef3e68",
+    "ZipSize": 637116,
     "IconSha256": "195ccd75c41eee806b581ed7f1076adf3295f4516c480c56a2a524963061dd84"
   }
 ]
