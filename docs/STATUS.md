@@ -2,6 +2,7 @@
 
 갱신: 2026-11-16
 
+- 2026-11-16: Tweak0.4.0.0 감정표현 상태 표시를 반영했다. [동기화43858274165](https://github.com/PlatyDuckbill/DuckbillRepo/actions/runs/43858274165) 성공·공용ff0f4ca, sync.ps1 -Check 통과. 고정/실제 main/pluginmaster.json의 Tweak·Fisher0.10.2.0·Calendar0.6.0.0 각22필드가 원본과 일치하며 익명 ZIP/체크섬/태그 아이콘 해시를 확인했다. Relic 첫 배포 대기와 실제 Dalamud 업데이트·인게임 확인은 유지한다.
 - 2026-11-16: Calendar0.6.0.0·Tweak0.3.1.0을 공용 목록에 반영했다. 기존 Fisher0.10.2.0과 Relic 첫 배포 대기를 유지했다. [동기화43835152193](https://github.com/PlatyDuckbill/DuckbillRepo/actions/runs/43835152193) 성공·공용43e9069, sync.ps1 -Check 통과. 고정/실제 main/pluginmaster.json의 세 항목 각22필드가 원본과 일치하며 ZIP/체크섬/태그 아이콘을 인증 없이 검증했다. 실제 Dalamud 업데이트·인게임 확인은 별도다.
 - 2026-11-14: DuckbillCalendar0.3.2.0 최초 배포를 등록했다. 공개 Release ZIP·SHA256·JSON/DLL 메타데이터·태그 아이콘 검증과 sync.ps1 및 -Check를 통과했다. Tweak0.2.2.2·Fisher0.9.0.0·Calendar0.3.2.0을 제공하며 Relic은 첫 배포 대기다. [등록 후 Actions](https://github.com/PlatyDuckbill/DuckbillRepo/actions/runs/43513740703)도 성공했고 인증 없는 공개 목록에서 세 항목을 확인했다. 실제 Dalamud 설치·인게임 확인은 별도다.
 - 목적: DuckbillTweak·DuckbillFisher·DuckbillCalendar·DuckbillRelic을 URL 하나로 제공하는 공용 설치 목록.
